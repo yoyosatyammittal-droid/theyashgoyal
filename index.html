@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>THEYASHGOYAL — Premium Business Solutions</title>
+<meta name="description" content="Transforming ideas into stunning visuals. Explore professional graphic design, creative solutions, and premium-quality services at THEYASHGOYAL." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;
+  --gold-light:#E8C97A;
+  --gold-pale:#F5EDD0;
+  --obsidian:#0A0A0A;
+  --deep:#111111;
+  --mid:#1C1C1C;
+  --surface:#242424;
+  --surface-light:#2E2E2E;
+  --white:#FAFAF8;
+  --cream:#F0EBE0;
+  --text-mute:rgba(250,250,248,0.45);
+  --text-sub:rgba(250,250,248,0.7);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+}
+html{scroll-behavior:smooth}
+body{background:var(--obsidian);color:var(--white);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(10,10,10,0.95),transparent);backdrop-filter:blur(12px)}
+.nav-logo{font-family:var(--serif);font-size:20px;font-weight:300;letter-spacing:0.25em;color:var(--gold);text-decoration:none}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{color:var(--text-sub);text-decoration:none;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:400;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:9px 24px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);transition:all 0.3s;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:var(--gold);color:var(--obsidian)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,168,76,0.07) 0%,transparent 70%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,black 20%,transparent 80%)}
+.hero-eyebrow{display:inline-block;color:var(--gold);font-size:11px;letter-spacing:0.35em;text-transform:uppercase;font-weight:400;margin-bottom:28px;animation:fadeUp 0.8s var(--ease) both}
+.hero h1{font-family:var(--serif);font-size:clamp(56px,9vw,110px);font-weight:300;line-height:1.0;letter-spacing:-0.01em;color:var(--white);margin-bottom:8px;animation:fadeUp 0.9s 0.1s var(--ease) both}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:300;color:var(--text-sub);margin-top:16px;margin-bottom:40px;max-width:680px;line-height:1.5;animation:fadeUp 1s 0.2s var(--ease) both}
+.hero-actions{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s 0.3s var(--ease) both}
+.btn-primary{background:var(--gold);color:var(--obsidian);padding:14px 40px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;cursor:pointer;font-family:var(--sans);border:none;transition:all 0.3s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);padding:14px 40px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:400;cursor:pointer;font-family:var(--sans);border:1px solid rgba(250,250,248,0.25);transition:all 0.3s;text-decoration:none;display:inline-block}
+.btn-outline:hover{border-color:var(--white)}
+.hero-stats{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);display:flex;gap:60px;animation:fadeUp 1s 0.5s var(--ease) both;white-space:nowrap}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--serif);font-size:36px;font-weight:300;color:var(--gold);line-height:1}
+.hero-stat-label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-mute);margin-top:6px}
+.hero-divider{width:1px;height:50px;background:rgba(201,168,76,0.3);margin:auto 0}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:18px 0;overflow:hidden;background:var(--deep)}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:marquee 22s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:32px;padding:0 40px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-mute)}
+.marquee-item span{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* SECTION COMMONS */
+.section-eyebrow{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:400}
+.section-title{font-family:var(--serif);font-size:clamp(36px,5vw,62px);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:20px}
+.section-title em{font-style:italic;color:var(--gold-light)}
+.section-body{font-size:16px;line-height:1.8;color:var(--text-sub);max-width:560px}
+.gold-line{width:48px;height:1px;background:var(--gold);margin-bottom:32px}
+
+/* ABOUT */
+.about-section{background:var(--obsidian);padding:120px 60px}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;max-width:1200px;margin:auto}
+.about-visual{position:relative}
+.about-img-frame{aspect-ratio:3/4;background:var(--surface);overflow:hidden;position:relative}
+.about-img-frame::before{content:'YG';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:120px;font-weight:300;color:var(--gold);opacity:0.15;letter-spacing:-0.05em}
+.about-img-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,0.08),transparent 60%)}
+.about-accent{position:absolute;bottom:-24px;right:-24px;width:60%;height:60%;border:1px solid var(--gold);opacity:0.25;pointer-events:none}
+.about-values{display:flex;flex-direction:column;gap:32px;margin-top:48px}
+.about-value{display:flex;gap:20px;align-items:flex-start}
+.about-value-num{font-family:var(--serif);font-size:13px;color:var(--gold);opacity:0.6;flex-shrink:0;margin-top:2px}
+.about-value-title{font-size:14px;font-weight:500;letter-spacing:0.05em;margin-bottom:6px;color:var(--white)}
+.about-value-desc{font-size:14px;color:var(--text-mute);line-height:1.7}
+
+/* SERVICES */
+.services-section{background:var(--deep);padding:120px 60px}
+.services-inner{max-width:1200px;margin:auto}
+.services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;flex-wrap:wrap;gap:24px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.service-card{background:var(--surface);padding:48px 40px;position:relative;overflow:hidden;cursor:default;transition:all 0.4s var(--ease)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.4s}
+.service-card:hover{background:var(--surface-light);transform:translateY(-4px)}
+.service-card:hover::before{opacity:1}
+.service-icon{font-size:32px;margin-bottom:28px;font-family:var(--serif);color:var(--gold);line-height:1}
+.service-title{font-family:var(--serif);font-size:24px;font-weight:300;color:var(--white);margin-bottom:14px;line-height:1.2}
+.service-desc{font-size:14px;color:var(--text-mute);line-height:1.8}
+.service-link{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:400;cursor:pointer}
+.service-link::after{content:'→';transition:transform 0.3s}
+.service-card:hover .service-link::after{transform:translateX(4px)}
+
+/* BLOG */
+.blog-section{background:var(--deep);padding:120px 60px}
+.blog-inner{max-width:1200px;margin:auto}
+.blog-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2px;margin-top:56px}
+.blog-card{background:var(--surface);overflow:hidden;position:relative;cursor:default}
+.blog-card-main{grid-row:span 2}
+.blog-card-img{aspect-ratio:16/10;background:var(--surface-light);position:relative;overflow:hidden}
+.blog-card-main .blog-card-img{aspect-ratio:4/5}
+.blog-card-img::before{content:attr(data-label);position:absolute;top:20px;left:20px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);background:rgba(10,10,10,0.85);padding:6px 12px}
+.blog-card-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:60px;color:rgba(201,168,76,0.12)}
+.blog-card-body{padding:28px 30px 30px}
+.blog-cat{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:400}
+.blog-title{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--white);line-height:1.35;margin-bottom:10px}
+.blog-card-main .blog-title{font-size:28px}
+.blog-excerpt{font-size:13px;color:var(--text-mute);line-height:1.75}
+.blog-meta{margin-top:16px;font-size:11px;letter-spacing:0.08em;color:var(--text-mute)}
+
+/* VALUES BAND */
+.values-band{background:var(--gold);padding:72px 60px}
+.values-band-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;align-items:start}
+.value-item{text-align:center}
+.value-item-icon{font-family:var(--serif);font-size:40px;font-weight:300;color:var(--obsidian);opacity:0.5;margin-bottom:20px;line-height:1}
+.value-item-title{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--obsidian);margin-bottom:10px}
+.value-item-desc{font-size:14px;color:rgba(10,10,10,0.6);line-height:1.7}
+
+/* VENTURES */
+.ventures-section{background:var(--obsidian);padding:120px 60px}
+.ventures-inner{max-width:1200px;margin:auto}
+.ventures-list{margin-top:60px;border-top:1px solid rgba(201,168,76,0.12)}
+.venture-row{display:flex;align-items:center;padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.08);gap:40px;transition:all 0.3s;cursor:default}
+.venture-row:hover{padding-left:16px}
+.venture-row:hover .venture-arrow{opacity:1;transform:translateX(0)}
+.venture-num{font-family:var(--serif);font-size:13px;color:var(--gold);opacity:0.5;width:40px;flex-shrink:0}
+.venture-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--white);flex:1}
+.venture-desc{font-size:13px;color:var(--text-mute);flex:2;line-height:1.6}
+.venture-tag{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:4px 12px;flex-shrink:0}
+.venture-arrow{font-size:18px;color:var(--gold);opacity:0;transform:translateX(-8px);transition:all 0.3s;flex-shrink:0}
+
+/* CONTACT */
+.contact-section{background:var(--obsidian);padding:120px 60px}
+.contact-inner{max-width:1000px;margin:auto;text-align:center}
+.contact-title{font-family:var(--serif);font-size:clamp(48px,7vw,88px);font-weight:300;line-height:1.0;margin-bottom:24px}
+.contact-title em{font-style:italic;color:var(--gold-light)}
+.contact-sub{font-size:16px;color:var(--text-mute);max-width:480px;margin:0 auto 48px;line-height:1.8}
+.contact-methods{margin-top:72px;padding-top:60px;border-top:1px solid rgba(201,168,76,0.12)}
+.contact-info{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.contact-method-label{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.contact-method-value{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--text-sub);line-height:1.6}
+
+/* FOOTER */
+footer{background:var(--deep);padding:48px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(201,168,76,0.1);flex-wrap:wrap;gap:24px}
+.footer-logo{font-family:var(--serif);font-size:16px;font-weight:300;letter-spacing:0.25em;color:var(--gold)}
+.footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+.footer-links a{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-mute);text-decoration:none;transition:color 0.3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:11px;color:var(--text-mute);letter-spacing:0.05em}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  .nav-links{display:none}
+  .hero{padding:100px 24px 120px}
+  .hero-stats{gap:32px;bottom:40px}
+  .about-section,.services-section,.ventures-section,.contact-section,.blog-section{padding:80px 24px}
+  .values-band{padding:60px 24px}
+  .about-inner{grid-template-columns:1fr;gap:48px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .blog-card-main{grid-row:auto}
+  .values-band-inner{grid-template-columns:1fr;gap:32px}
+  .ventures-list .venture-desc{display:none}
+  .contact-info{grid-template-columns:1fr;gap:32px;text-align:left}
+  footer{padding:32px 24px;flex-direction:column;align-items:flex-start;gap:16px}
+  .services-header{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:560px){
+  .services-grid{grid-template-columns:1fr}
+  .hero-stats{gap:20px}
+  .hero-divider{height:36px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">THEYASHGOYAL</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#blog">Insights</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-eyebrow">Kota, Rajasthan, India · Est. 2024</div>
+  <h1>Your Gateway<br>to <em>Success</em></h1>
+  <p class="hero-sub">Transforming ideas into exceptional results across business, design, digital ventures, and beyond.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="#services">Explore services</a>
+    <a class="btn-outline" href="#about">Our story</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">6+</div>
+      <div class="hero-stat-label">Ventures</div>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">100%</div>
+      <div class="hero-stat-label">Dedicated</div>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">∞</div>
+      <div class="hero-stat-label">Ambition</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span></span>Quality Over Everything</div>
+    <div class="marquee-item"><span></span>Digital Marketing</div>
+    <div class="marquee-item"><span></span>Business Ventures</div>
+    <div class="marquee-item"><span></span>Client-Centric Focus</div>
+    <div class="marquee-item"><span></span>Creative Excellence</div>
+    <div class="marquee-item"><span></span>Travel &amp; Lifestyle</div>
+    <div class="marquee-item"><span></span>Timeliness &amp; Reliability</div>
+    <div class="marquee-item"><span></span>Quality Over Everything</div>
+    <div class="marquee-item"><span></span>Digital Marketing</div>
+    <div class="marquee-item"><span></span>Business Ventures</div>
+    <div class="marquee-item"><span></span>Client-Centric Focus</div>
+    <div class="marquee-item"><span></span>Creative Excellence</div>
+    <div class="marquee-item"><span></span>Travel &amp; Lifestyle</div>
+    <div class="marquee-item"><span></span>Timeliness &amp; Reliability</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-inner">
+    <div class="about-visual reveal">
+      <div class="about-img-frame"></div>
+      <div class="about-accent"></div>
+    </div>
+    <div class="reveal">
+      <div class="section-eyebrow">About</div>
+      <div class="gold-line"></div>
+      <h2 class="section-title">Dynamic world of<br><em>business solutions</em></h2>
+      <p class="section-body">Founded with a vision to excel across multiple industries, THEYASHGOYAL has grown from a trusted gas services provider into a multi-dimensional enterprise — spanning digital marketing, e-commerce, construction, oil mill operations, and content creation.</p>
+      <div class="about-values">
+        <div class="about-value">
+          <div class="about-value-num">01</div>
+          <div>
+            <div class="about-value-title">People First</div>
+            <div class="about-value-desc">Every client, partner, and collaborator is treated with the care and attention their vision deserves.</div>
+          </div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-num">02</div>
+          <div>
+            <div class="about-value-title">Quality of Work</div>
+            <div class="about-value-desc">Mediocrity isn't in our vocabulary. From small projects to full-scale campaigns, the highest standards apply.</div>
+          </div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-num">03</div>
+          <div>
+            <div class="about-value-title">Unwavering Dedication</div>
+            <div class="about-value-desc">Every deadline is a commitment. Every promise, kept. Excellence is our baseline, not our aspiration.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES BAND -->
+<div class="values-band">
+  <div class="values-band-inner">
+    <div class="value-item">
+      <div class="value-item-icon">◈</div>
+      <div class="value-item-title">Quality Over Everything</div>
+      <div class="value-item-desc">Every deliverable reflects a standard of craft that sets us apart, regardless of project scale.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-item-icon">◎</div>
+      <div class="value-item-title">Client-Centric Focus</div>
+      <div class="value-item-desc">Your vision is our mission. We align every decision with your goals and brand identity.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-item-icon">◇</div>
+      <div class="value-item-title">Timeliness &amp; Reliability</div>
+      <div class="value-item-desc">We respect your deadlines as much as our own — quality never compromises punctuality.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="services-inner">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-eyebrow">What we offer</div>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Premium <em>Services</em></h2>
+      </div>
+      <a class="btn-outline" href="#contact">Work with us</a>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <div class="service-title">Digital Marketing</div>
+        <div class="service-desc">Expert strategies for brands that want to dominate online. SEO, content, paid media, and performance analytics — delivered with precision.</div>
+        <div class="service-link">Explore</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⬡</div>
+        <div class="service-title">Guest Posting &amp; Content</div>
+        <div class="service-desc">Premium editorial placement and high-quality content creation that builds authority, drives traffic, and elevates your brand narrative.</div>
+        <div class="service-link">Explore</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <div class="service-title">E-Commerce Solutions</div>
+        <div class="service-desc">End-to-end retail experiences through Uletus.in and Uletus.com — curated products, seamless checkout, premium merchandise.</div>
+        <div class="service-link">Explore</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◎</div>
+        <div class="service-title">HP Gas Services</div>
+        <div class="service-desc">Trusted gas delivery and management through N.V. Goyal Gas Agency — a cornerstone of dependability in Kota, Rajasthan.</div>
+        <div class="service-link">Explore</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">△</div>
+        <div class="service-title">Construction &amp; Infrastructure</div>
+        <div class="service-desc">Building quality infrastructure with expertise, precision, and reliability. From planning to completion, we deliver structural excellence.</div>
+        <div class="service-link">Explore</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">❋</div>
+        <div class="service-title">Mustard Oil Mill Operations</div>
+        <div class="service-desc">High-quality mustard oil production through Aayushman Mustard Oil Mill — purity, tradition, and modern efficiency combined.</div>
+        <div class="service-link">Explore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENTURES -->
+<section id="ventures" class="ventures-section">
+  <div class="ventures-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">Portfolio</div>
+      <div class="gold-line"></div>
+      <h2 class="section-title">Business <em>Ventures</em></h2>
+    </div>
+    <div class="ventures-list reveal">
+      <div class="venture-row">
+        <div class="venture-num">01</div>
+        <div class="venture-name">N.V. Goyal Gas Agency</div>
+        <div class="venture-desc">HPCL-authorized gas services serving the Kota region with reliability and professionalism.</div>
+        <div class="venture-tag">Energy</div>
+        <div class="venture-arrow">→</div>
+      </div>
+      <div class="venture-row">
+        <div class="venture-num">02</div>
+        <div class="venture-name">Uletus</div>
+        <div class="venture-desc">Premium online retail — Uletus.in and Uletus.com — curating high-quality merchandise and products.</div>
+        <div class="venture-tag">E-Commerce</div>
+        <div class="venture-arrow">→</div>
+      </div>
+      <div class="venture-row">
+        <div class="venture-num">03</div>
+        <div class="venture-name">Aayushman Mustard Oil Mill</div>
+        <div class="venture-desc">Traditional purity meets modern efficiency in producing premium-grade mustard oil for the market.</div>
+        <div class="venture-tag">FMCG</div>
+        <div class="venture-arrow">→</div>
+      </div>
+      <div class="venture-row">
+        <div class="venture-num">04</div>
+        <div class="venture-name">Hope – The Helping Hand</div>
+        <div class="venture-desc">A social initiative dedicated to community upliftment, support, and creating positive change in lives.</div>
+        <div class="venture-tag">Social</div>
+        <div class="venture-arrow">→</div>
+      </div>
+      <div class="venture-row">
+        <div class="venture-num">05</div>
+        <div class="venture-name">Digital Marketing &amp; Freelancing</div>
+        <div class="venture-desc">Professional digital growth services for brands seeking to amplify their online presence and revenue.</div>
+        <div class="venture-tag">Digital</div>
+        <div class="venture-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="blog-section">
+  <div class="blog-inner">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div>
+        <div class="section-eyebrow">Insights</div>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Latest <em>Writings</em></h2>
+      </div>
+      <a class="btn-outline" href="https://theyashgoyal.com/category/blog/" target="_blank">All articles</a>
+    </div>
+    <div class="blog-grid reveal">
+      <div class="blog-card blog-card-main">
+        <div class="blog-card-img" data-label="Travel">
+          <div class="blog-card-img-inner">✈</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Travel Guides</div>
+          <div class="blog-title">Ultimate Guide to Booking with Booking.com: Tips for Seamless Stays 2026</div>
+          <div class="blog-excerpt">Planning a trip feels like assembling a jigsaw puzzle — finding the right place to stay can make or break your adventure. This guide simplifies everything.</div>
+          <div class="blog-meta">June 2026 · 8 min read</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-img" data-label="Business">
+          <div class="blog-card-img-inner">◎</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Online Income</div>
+          <div class="blog-title">Tools and Insights to Start Your E-Commerce Business 2026</div>
+          <div class="blog-meta">May 2026 · 6 min read</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-img" data-label="Lifestyle">
+          <div class="blog-card-img-inner">✦</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Productivity</div>
+          <div class="blog-title">Savor the World: 15 Must-Know Tips for Dining with Eatwith</div>
+          <div class="blog-meta">April 2026 · 5 min read</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">Let's connect</div>
+      <div class="gold-line" style="margin:0 auto 32px"></div>
+      <h2 class="contact-title">Ready to build<br>something <em>great?</em></h2>
+      <p class="contact-sub">Whether you're seeking digital marketing expertise, business partnerships, or creative services — let's start a conversation.</p>
+      <a class="btn-primary" href="mailto:contact@theyashgoyal.com">Start a conversation</a>
+    </div>
+    <div class="contact-methods reveal">
+      <div class="contact-info">
+        <div>
+          <div class="contact-method-label">Location</div>
+          <div class="contact-method-value">Kota, Rajasthan<br>India 324009</div>
+        </div>
+        <div>
+          <div class="contact-method-label">Phone</div>
+          <div class="contact-method-value">Yash Goyal<br>+91 7976089672</div>
+        </div>
+        <div>
+          <div class="contact-method-label">Availability</div>
+          <div class="contact-method-value">Monday – Sunday<br>All hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">THEYASHGOYAL</div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="https://theyashgoyal.com/privacy-policy/" target="_blank">Privacy</a></li>
+    <li><a href="https://theyashgoyal.com/terms-conditions/" target="_blank">Terms</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 THEYASHGOYAL. All rights reserved.</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
